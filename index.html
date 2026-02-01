@@ -59,8 +59,9 @@
             <div class="flex justify-between items-center h-24"> <!-- ロゴに合わせて高さを少し調整 -->
                 <div class="flex-shrink-0 flex items-center">
                     <!-- ロゴ画像（横型） -->
-                    <!-- 背景が暗い時も見やすいよう、白い背景ボックスを薄く敷くか、ロゴのデザインによってはそのまま配置 -->
-                    <div class="bg-white/90 px-3 py-1 rounded-md">
+                    <!-- id="logo-container"を追加し、初期状態の bg-white/90 を削除 -->
+                    <!-- transitionを追加してふわっと切り替わるように設定 -->
+                    <div id="logo-container" class="px-3 py-1 rounded-md transition-all duration-300">
                         <img src="1234.png" alt="株式会社アジィル" class="h-12 w-auto">
                     </div>
                 </div>
@@ -427,15 +428,25 @@
 
         // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
+        const logoContainer = document.getElementById('logo-container'); // ロゴの背景用要素を取得
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                // スクロール時: 背景白、文字濃い色
+                // スクロール時: 
+                // ナビバー: 背景白、文字濃い色
                 navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'text-onsen-primary');
                 navbar.classList.remove('bg-transparent', 'text-white');
+                
+                // ロゴ背景: 白い箱を表示 (今のまま)
+                logoContainer.classList.add('bg-white/90');
             } else {
-                // トップ表示時: 背景透明、文字白
+                // トップ表示時: 
+                // ナビバー: 背景透明、文字白
                 navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'text-onsen-primary');
                 navbar.classList.add('bg-transparent', 'text-white');
+
+                // ロゴ背景: 白い箱を削除 (ロゴのみ表示)
+                logoContainer.classList.remove('bg-white/90');
             }
         });
 
