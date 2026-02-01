@@ -56,22 +56,26 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 text-white" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-24"> <!-- ロゴに合わせて高さを少し調整 -->
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="font-serif text-2xl font-bold tracking-widest">株式会社アジィル</span>
+                    <!-- ロゴ画像（横型） -->
+                    <!-- 背景が暗い時も見やすいよう、白い背景ボックスを薄く敷くか、ロゴのデザインによってはそのまま配置 -->
+                    <div class="bg-white/90 px-3 py-1 rounded-md">
+                        <img src="1234.png" alt="株式会社アジィル" class="h-12 w-auto">
+                    </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#mission" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium">理念</a>
-                        <a href="#business" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium">事業領域</a>
-                        <a href="#achievements" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium">活動実績</a>
-                        <a href="#company" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium">会社概要</a>
+                        <a href="#mission" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium mix-blend-difference">理念</a>
+                        <a href="#business" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium mix-blend-difference">事業領域</a>
+                        <a href="#achievements" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium mix-blend-difference">活動実績</a>
+                        <a href="#company" class="hover:text-onsen-accent transition px-3 py-2 rounded-md text-sm font-medium mix-blend-difference">会社概要</a>
                         <a href="#contact" class="bg-onsen-accent text-white hover:bg-opacity-90 transition px-5 py-2 rounded-full text-sm font-medium shadow-lg border border-transparent">お問い合わせ</a>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="-mr-2 flex md:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md hover:text-onsen-accent focus:outline-none">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md hover:text-onsen-accent focus:outline-none bg-black/20">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -89,12 +93,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- 背景色：画像読み込み前も温泉の雰囲気が出るよう、深い青緑のグラデーションを設定 -->
     <div class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a4c4f] via-[#207478] to-[#2C3E50]">
         
-        <!-- ★ここに画像のURL、またはファイル名を貼り付けてください -->
-        <!-- アップロードいただいた画像ファイル名を設定しました -->
-        <!-- ※HTMLファイルと同じフォルダにこの画像を置いてください -->
+        <!-- 背景画像：ご提供いただいた温泉画像 -->
         <img 
              src="33894375_m.jpg" 
              alt="温泉の風景" 
@@ -338,6 +339,12 @@
     <!-- Company Profile -->
     <section id="company" class="py-24 px-4 bg-onsen-warm/20">
         <div class="max-w-4xl mx-auto scroll-reveal">
+            
+            <!-- ロゴ配置（縦型） -->
+            <div class="flex justify-center mb-8">
+                <img src="5678.png" alt="Asille Logo" class="h-24 w-auto drop-shadow-sm">
+            </div>
+
             <div class="text-center mb-12">
                 <span class="text-onsen-accent font-bold tracking-widest text-sm uppercase mb-2 block">COMPANY</span>
                 <h2 class="font-serif text-3xl font-bold text-onsen-primary">会社概要</h2>
